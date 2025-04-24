@@ -1,8 +1,9 @@
 package main
 
 import (
-	_ "Belajar_Golang/helper" // BLANK IDENTIFIER
-	"Belajar_Golang/package-init/database"
+	//_ "Belajar_Golang/helper" // BLANK IDENTIFIER
+	"github.com/jejehyunlee/Go-Fundamental/v2/package-init/database"
+
 	"fmt"
 )
 
