@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func random() interface{} {
+	return true
+}
+
+func main() {
+
+	var data interface{} = random()
+
+	switch data.(type) {
+	case string:
+		fmt.Println("ini string")
+	case int:
+		fmt.Println("ini int")
+	default:
+		fmt.Println("ini default")
+
+	}
+
+}

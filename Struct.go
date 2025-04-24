@@ -1,0 +1,34 @@
+package main
+
+import "fmt"
+
+type Person struct {
+	First string
+	Last  string
+	Age   int
+}
+
+func (p Person) FullName() string {
+	return p.First + " " + p.Last
+}
+
+func main() {
+
+	dataPerson := Person{
+		Age:   10,
+		First: "Asu",
+		Last:  "Asu",
+	}
+	fmt.Println(dataPerson)
+
+	fmt.Println(Person{"kamu", "Asu", 10})
+
+	var data Person
+	data.First = "Kamu"
+	data.Last = "Asu"
+	data.Age = 10
+	fmt.Println(data)
+
+	fmt.Println(data.FullName())
+
+}

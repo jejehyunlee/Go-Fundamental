@@ -1,0 +1,14 @@
+package main
+
+import (
+	"Belajar_Golang/helper"
+	"fmt"
+)
+
+func main() {
+
+	data := helper.SayHello("Jefri")
+
+	fmt.Println(data)
+
+}

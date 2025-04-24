@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+//func clsr() func(int) int {
+//
+//
+//
+//
+//}
+
+func main() {
+
+	counter := 1
+	increment := func() {
+		fmt.Println("incremment")
+		counter++
+
+	}
+
+	increment()
+	fmt.Println(counter)
+}

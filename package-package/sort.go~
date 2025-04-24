@@ -1,0 +1,46 @@
+package main
+
+import (
+	"fmt"
+	"sort"
+)
+
+type User struct {
+	Name string
+	Age  int
+}
+
+type Array []User
+
+func (array Array) Less(i, j int) bool {
+	//TODO implement me
+	return array[i].Age < array[j].Age
+}
+
+func (array Array) Swap(i, j int) {
+	//TODO implement me
+	array[i], array[j] = array[j], array[i]
+}
+
+func (array Array) Len() int {
+	//TODO implement me
+	return len(array)
+}
+
+func main() {
+
+	dataUser := []User{
+		{"JEJE", 30},
+		{"Budi", 20},
+		{"Joko", 40},
+		{"Joni", 50},
+	}
+
+	sort.Sort(Array(dataUser))
+	fmt.Println(dataUser)
+
+	listUser := []string{"JEJE", "Budi", "Joko", "Joni"}
+
+	sort.Strings(listUser)
+	fmt.Println(listUser)
+}

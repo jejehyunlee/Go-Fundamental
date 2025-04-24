@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func panicFunc() {
+	fmt.Println("aplikasi selesai")
+	//message := recover()
+	//if message != nil {
+	//	fmt.Println(message)
+	//}
+}
+
+func runApp(error bool) {
+	defer panicFunc()
+	if error {
+		panic("terjadi error")
+	}
+	fmt.Println("aplikasi berjalan")
+}
+
+func main() {
+	runApp(true)
+}

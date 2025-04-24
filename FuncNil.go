@@ -1,0 +1,32 @@
+package main
+
+import "fmt"
+
+func funcNil(first string, last string) map[string]string {
+	if first == "" {
+		return nil
+	} else if last == "" {
+		return nil
+	} else {
+		return map[string]string{
+			"nama depan":    first,
+			"nama belakang": last,
+		}
+	}
+}
+
+func main() {
+
+	first := "JEJE"
+	last := "Saputra"
+
+	data := funcNil(
+		first,
+		last,
+	)
+	if data == nil {
+		fmt.Println("Data Kosong")
+	} else {
+		fmt.Println(data)
+	}
+}

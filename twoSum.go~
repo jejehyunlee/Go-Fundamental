@@ -1,0 +1,30 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+func twoSum(nums []int, target int) []int {
+	var result []int
+	for i := 0; i < len(nums); i++ {
+		for j := i + 1; j < len(nums); j++ {
+			if nums[i]+nums[j] == target {
+				result = append(result, i)
+				result = append(result, j)
+			}
+		}
+	}
+	return result
+}
+
+func namaHewan() string {
+
+	data := []string{"babi", "Burung", "Kucing"}
+
+	Data := []int{1, 2, 3}
+	size := Data[0]
+	fmt.Println(size)
+
+	return strings.Join(data, ",")
+}

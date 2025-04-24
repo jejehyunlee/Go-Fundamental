@@ -1,0 +1,22 @@
+package main
+
+import (
+	"flag"
+	"fmt"
+)
+
+func main() {
+
+	hostname := flag.String("hostname", "localhost", "put yourhostname")
+	username := flag.String("username", "root", "put your username")
+	password := flag.String("password", "123", "put your password")
+
+	flag.Parse()
+
+	fmt.Println(
+		"Hostname: ", *hostname,
+		"Username: ", *username,
+		"Password: ", *password,
+		)
+
+}

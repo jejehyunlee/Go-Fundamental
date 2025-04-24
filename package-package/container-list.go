@@ -1,0 +1,21 @@
+package main
+
+import (
+	"container/list"
+	"fmt"
+)
+
+func main() {
+
+	data := list.New()
+	data.PushBack("Jefri")
+	data.PushBack("Saputra")
+
+	fmt.Println(data.Front().Value)
+	fmt.Println(data.Back().Value)
+
+	for value := data.Back(); value != nil; value = value.Prev() {
+		fmt.Println(value.Value)
+	}
+
+}
